@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
+.toggle-fade-enter-active {
+  transition: opacity 0.5s ease;
+}
+
+.toggle-fade-enter-from{
+  opacity: 0;
+  height: 0px;
+}
