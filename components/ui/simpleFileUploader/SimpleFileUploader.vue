@@ -1,15 +1,15 @@
 <template>
-  <div class="file-drop prima" @drop="handleDrop" @dragover.prevent @click="handleClick">
+  <div class="file-drop prima" @drop.prevent="handleDrop" @dragover.prevent @click="handleClick">
     <input ref="fileInput" type="file" style="display: none" accept="image/*" @change="handleFileInputChange">
     <div v-if="!file" class="drop-area">
       <p>Перетащите файлы сюда или нажмите, чтобы выбрать</p>
     </div>
     <div v-else class="preview">
       <img :src="file" alt="Preview" class="preview-image">
-      <button class="delete-button" @click="deleteFile">
-        Удалить
-      </button>
     </div>
+    <button v-if="file" class="delete-button" @click.self="deleteFile">
+      Удалить
+    </button>
   </div>
 </template>
 
@@ -20,7 +20,6 @@ const file = ref(null)
 const fileInput = ref(null)
 
 const handleDrop = (event) => {
-  event.preventDefault()
   const fileData = event.dataTransfer.files[0]
   readFile(fileData)
 }
@@ -77,16 +76,16 @@ const deleteFile = () => {
     max-height: 100%;
     object-fit: cover;
   }
-
-  .delete-button {
-    position: absolute;
-    margin-top: 10px;
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    z-index: 2;
-    cursor: pointer;
-  }
+}
+.delete-button {
+  position: absolute;
+  background-color: rgb(var(--v-theme-primary-darken-2));
+  color: rgb(var(--v-theme-white));
+  border: none;
+  padding: 5px 10px;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  cursor: pointer;
 }
 </style>

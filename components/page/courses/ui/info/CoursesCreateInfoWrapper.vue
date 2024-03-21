@@ -6,7 +6,7 @@
       </h2>
       <v-row justify="center">
         <v-col cols="12">
-          <v-card height="200">
+          <v-card height="327">
             <slot name="main" />
           </v-card>
         </v-col>
@@ -17,17 +17,24 @@
             <slot name="description" />
           </p>
         </v-col>
-        <v-col cols="12" sm="6">
-          <v-card height="300">
+        <v-col cols="1" sm="6">
+          <v-card height="327">
             <slot name="side" />
           </v-card>
         </v-col>
       </v-row>
       <v-row justify="center">
         <v-col cols="12">
-          <v-card height="200">
+          <v-card height="327">
             <slot name="bottom" />
           </v-card>
+        </v-col>
+      </v-row>
+      <v-row justify="center">
+        <v-col cols="12">
+          <slot
+            name="form"
+          />
         </v-col>
       </v-row>
     </v-container>

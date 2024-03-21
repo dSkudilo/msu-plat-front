@@ -18,6 +18,6 @@
   </CoursesCreateWrapper>
 </template>
 <script setup lang="ts">
-import CoursesCreateWrapper from '~/components/page/courses/ui/coursesCreateWrapper/CoursesCreateWrapper.vue'
+import CoursesCreateWrapper from '~/components/page/courses/ui/info/CoursesCreateInfoWrapper.vue'
 import { SimpleFileUploader } from '~/components/ui/simpleFileUploader'
 </script>
