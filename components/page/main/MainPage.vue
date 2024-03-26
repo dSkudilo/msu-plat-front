@@ -17,7 +17,6 @@
         </simple-card>
       </template>
     </MainWrapper>
-    <BasicTable />
     />
   </div>
 </template>
@@ -28,7 +27,6 @@ import { useStateMain } from '~/components/page/main/model/useStateMain'
 import MainCard from '~/components/page/main/ui/MainCard.vue'
 import SimpleCard from '~/components/ui/simpleCard/SimpleCard.vue'
 import SimpleIcon from '~/components/ui/simpleIcon/SimpleIcon.vue'
-import BasicTable from '~/components/ui/basicTable/BasicTable.vue'
 
 const {
   CardsContent

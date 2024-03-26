@@ -1,6 +1,6 @@
 <template>
   <div class="courses-create-layout mb-2">
-    <div class="courses-create-layout__tabs my-3 d-flex justify-start">
+    <div class="courses-create-layout__tabs my-3 d-flex justify-start ml-6">
       <slot name="tabs" />
     </div>
     <div class="courses-create-layout__content">

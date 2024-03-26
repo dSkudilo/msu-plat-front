@@ -9,9 +9,7 @@
           <slot name="action" />
         </div>
       </div>
-      <div class="w-100 flex-column d-flex ga-5 justify-center align-center">
-        <slot name="content" />
-      </div>
+      <slot name="content" />
     </v-container>
   </SectionWrapper>
 </template>
